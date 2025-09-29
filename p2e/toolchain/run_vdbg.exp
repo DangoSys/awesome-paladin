@@ -1,0 +1,14 @@
+#!/usr/bin/expect -f
+
+# 启动 vdbg
+spawn vdbg
+
+# 等待 vdbg 提示符
+expect "vdbg> "
+
+# 执行 source debug_trigger.tcl
+send "source debug_trigger.tcl\r"
+
+send "bash screen_setup.sh\r"
+
+interact
